@@ -7,10 +7,8 @@ const app = express();
 
 // Apply CORS middleware before routes
 app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Include OPTIONS method
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Include Authorization header if needed
-    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
 
